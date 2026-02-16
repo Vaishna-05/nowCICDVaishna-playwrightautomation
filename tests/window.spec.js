@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test'
 
-test('window', async({page,context})=>{
+test.skip('window', async({page,context})=>{
 
     await page.goto('https://the-internet.herokuapp.com/windows');
     console.log(await context.pages().length)

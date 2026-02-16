@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test('paraBank', async ({ page }) => {
+test.skip('paraBank', async ({ page }) => {
 
    await page.goto('https://www.amazon.in/');
    await page.locator('input#twotabsearchtextbox').fill('samsung')

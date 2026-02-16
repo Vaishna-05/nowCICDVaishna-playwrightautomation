@@ -82,7 +82,8 @@ await Promise.all([
     page.getByRole('button').filter({hasText:/^Open Multiple$/}).click()
 
 ])
-await expect.poll(context.pages().length).toBeGreaterThan(1)
+await expect.poll(() => context.pages().length).toBeGreaterThan(1)
+
 console.log(context.pages().length);
   const count=context.pages();
   for(let counts of count)

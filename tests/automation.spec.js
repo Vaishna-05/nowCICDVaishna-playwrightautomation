@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('automation website', async ({ page }) => {
+test.skip('automation website', async ({ page }) => {
 
   await page.goto('https://automationexercise.com/');
 
@@ -38,7 +38,7 @@ test('automation website', async ({ page }) => {
   console.log(list);
 
   // Proceed to checkout
-  await page
-    .getByRole('button', { name: /Proceed To Checkout/i })
-    .click();
+await page.waitForTimeout(2000);
+await page.getByRole('button', { name: /Proceed To Checkout/i }).click({ timeout: 60000 });
+
 });

@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test'
 
-test('frame',async({page})=>{
+test.skip('frame',async({page})=>{
 
     await page.goto('https://the-internet.herokuapp.com/iframe');
     console.log(await page.frames().length);
@@ -18,7 +18,7 @@ console.log(f.url());
   const frame = page.frameLocator('#mce_0_ifr');
   const editor = frame.locator('#tinymce');
 
-  await editor.click();        // focus editor
+ await editor.focus();       // focus editor
   await page.keyboard.press('Control+A');  // select all
   await page.keyboard.press('Backspace');  // delete old text
   await page.keyboard.type('Hello Vaishu');

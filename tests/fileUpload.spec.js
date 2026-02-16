@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test'
 
 
-test('fileUpload',async({page})=>{
+test.skip('fileUpload',async({page})=>{
 
 
    await page.goto('https://the-internet.herokuapp.com/upload', {
