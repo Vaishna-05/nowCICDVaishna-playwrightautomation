@@ -13,7 +13,7 @@ await page.locator('.card').filter('Alert (Simple Dialog)').locator('button[oncl
 })
 
 
-test.only('window',async({page,context})=>{
+test('window',async({page,context})=>{
 
 await page.goto('https://www.leafground.com/window.xhtml');
 console.log(context.pages().length);

@@ -91,7 +91,7 @@ console.log(context.pages().length);
   }
 })
 
-test.only('select',async({page})=>{
+test('select',async({page})=>{
 
 await page.goto('https://www.leafground.com/select.xhtml');
 await page.locator('select.ui-selectonemenu').selectOption('Playwright');
