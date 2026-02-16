@@ -42,3 +42,6 @@ await page.waitForTimeout(2000);
 await page.getByRole('button', { name: /Proceed To Checkout/i }).click({ timeout: 60000 });
 
 });
+test('force fail', async ({ page }) => {
+  expect(1).toBe(2);
+});
